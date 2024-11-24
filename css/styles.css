@@ -86,6 +86,11 @@ header {
     font-weight: 700;
     margin-bottom: 10px;
 }
+.content-title {
+    padding-top: 15px;
+    font-size: 50px;
+    font-family: 'SF Pro Display';
+}
 
 .content p {
     font-size: 20px;
@@ -261,5 +266,28 @@ header {
     background-color: #f1f1f1;
     border-radius: 10px;
     margin: 20px 0;
+}
+
+.content-p {
+    font-size: 20px;
+    color: #777;
+    font-family: 'SF Pro Display Regular';
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .download-btn {
+        display:none
+    }
+    .object-block {
+        width: calc(100% - 50px);
+    }
+    .team-object-block {
+        width: calc(100% - 50px);
+    }
+    .content-p {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
