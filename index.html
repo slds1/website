@@ -17,17 +17,24 @@
 </header>
 
 <div class="content">
-  <img src="css/planet-salupov.svg" alt="Planet Salupov">
+  <div class="popover-container">
+    <img src="css/planet-salupov.svg" alt="Planet Salupov" class="popover-trigger">
+    <div class="popover">
+      <div id="update-time">last updated * time *</div>
+    </div>
+  </div>
+  <div style="height: 30px;"></div>
   <div class="content-title">SalupovTeam LLC</div>
-  <div class="content-p">We are small group of developers who makes apps for iPhones, and find bugs for apple platforms.</div>
+  <div class="content-p">We make amazing apps and tools for Apple Platforms</div>
 </div>
+<div style="height: 30px;"></div>
 <div class="content">
   <div style="height: 40px;"></div>
   <div class="object-block">
     <div class="obj-block-hstack-small">
       <img src="img/bacon-icon.png" alt="Bacon Icon" class="obj-block-icon">
       <div class="obj-block-vstack-small">
-        <h1>Bacon</h1>
+        <div class="obj-app-title">Bacon</div>
         <p>Bluetooth Toolkit</p>
       </div>
     </div>
@@ -44,7 +51,7 @@
     <div class="obj-block-hstack-small">
       <img src="img/remind-icon.png" alt="Remind Icon" class="obj-block-icon">
       <div class="obj-block-vstack-small">
-        <h1>Remind</h1>
+        <div class="obj-app-title">Remind</div>
         <p>Easy reminders</p>
       </div>
     </div>
@@ -67,14 +74,14 @@
     <div class="obj-block-hstack-small">
       <img src="img/latte.jpeg" alt="latte" class="obj-block-icon" style="border-radius: 100px;">
       <div class="obj-block-vstack-small">
-        <h1>latte_1</h1>
+        <div class="obj-app-title">latte_1</div>
         <p>CEO</p>
       </div>
     </div>
     <div class="obj-block-hstack-small">
       <img src="img/slds1.jpeg" alt="latte" class="obj-block-icon" style="border-radius: 100px;">
       <div class="obj-block-vstack-small">
-        <h1>S0meyosh1no</h1>
+        <div class="obj-app-title">S0meyosh1no</div>
         <p>Developer</p>
       </div>
     </div>
@@ -82,7 +89,30 @@
   <div style="height: 40px;"></div>
 
 </div>
+
+<script>
+  const lastUpdate = new Date('2024-11-25T20:34:50');
+  const now = new Date();
+  const diffInDays = Math.floor((now - lastUpdate) / (1000 * 60 * 60 * 24));
+  const options = { month: 'long', day: 'numeric', year: 'numeric' };
+
+  let formattedDate;
+  if (diffInDays === 0) {
+    formattedDate = 'Today';
+  } else if (diffInDays === 1) {
+    formattedDate = 'Yesterday';
+  } else if (diffInDays <= 7) {
+    formattedDate = `${diffInDays} Days ago`;
+  } else {
+    formattedDate = lastUpdate.toLocaleDateString('en-US', options);
+  }
+
+  document.getElementById('update-time').innerText = `Updated${formattedDate.includes('Today') || formattedDate.includes('Yesterday') ? '' : ' at'} ${formattedDate}`;
+</script>
+
+
 </body>
 </html>
+
 
 
