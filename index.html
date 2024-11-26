@@ -12,17 +12,14 @@
 <header>
   <h1 class="name">SalupovTeam LLC</h1>
   <div class="header-btn-stack">
-    <button class="header-btn">Beta Website</button>
+    <div class="button-container">
+      <a href="https://t.me/rldtnfk" class="header-btn">Contact</a>
+    </div>
   </div>
 </header>
 
 <div class="content">
-  <div class="popover-container">
-    <img src="css/planet-salupov.svg" alt="Planet Salupov" class="popover-trigger">
-    <div class="popover">
-      <div id="update-time">last updated * time *</div>
-    </div>
-  </div>
+    <img src="css/planet-salupov.svg" alt="Planet Salupov">
   <div style="height: 30px;"></div>
   <div class="content-title">SalupovTeam LLC</div>
   <div class="content-p">We make amazing apps and tools for Apple Platforms</div>
@@ -57,7 +54,7 @@
     </div>
     <div class="content-h-reimagined" style="padding-left: 20px; padding-right: 20px; padding-bottom: 20px;">
       Fast, easy, modern reminders app made in <span class="purple-gradient-text">SwiftUI.</span>
-      <br>It also supports <span class="purple-gradient-text">iCloud Backups</span>, sharing reminders, and even more!
+      <br>It also supports <span class="purple-gradient-text">iCloud Backups</span>, sharing reminders,<br> and even more!
       Planning to release in January 2025
     </div>
     <div class="button-container">
@@ -85,30 +82,18 @@
         <p>Developer</p>
       </div>
     </div>
+    <div class="obj-block-hstack-small">
+      <img src="img/alwwwd.jpg" alt="latte" class="obj-block-icon" style="border-radius: 100px;">
+      <div class="obj-block-vstack-small">
+        <div class="obj-app-title">alwwwd</div>
+        <p>Supporter</p>
+      </div>
+
+    </div>
   </div>
   <div style="height: 40px;"></div>
 
 </div>
-
-<script>
-  const lastUpdate = new Date('2024-11-25T20:34:50');
-  const now = new Date();
-  const diffInDays = Math.floor((now - lastUpdate) / (1000 * 60 * 60 * 24));
-  const options = { month: 'long', day: 'numeric', year: 'numeric' };
-
-  let formattedDate;
-  if (diffInDays === 0) {
-    formattedDate = 'Today';
-  } else if (diffInDays === 1) {
-    formattedDate = 'Yesterday';
-  } else if (diffInDays <= 7) {
-    formattedDate = `${diffInDays} Days ago`;
-  } else {
-    formattedDate = lastUpdate.toLocaleDateString('en-US', options);
-  }
-
-  document.getElementById('update-time').innerText = `Updated${formattedDate.includes('Today') || formattedDate.includes('Yesterday') ? '' : ' at'} ${formattedDate}`;
-</script>
 
 
 </body>

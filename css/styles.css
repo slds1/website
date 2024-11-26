@@ -59,17 +59,19 @@ header {
 }
 
 .header-btn {
+
     background-color: #007aff;
     color: #fff;
     border: none;
-    border-radius: 16px;
-    padding: 8px 16px;
+    border-radius: 40px;
+    padding: 7px 20px;
     cursor: pointer;
-    font-size: 14px;
-    font-weight: 400;
-    font-family: 'SF Pro Display Regular', inherit;
+    font-size: 17px;
+    position: absolute;
+    top: 19px;
+    right: 15px;
     transition: background-color 0.2s;
-    box-sizing: border-box;
+    text-decoration: none;
 }
 
 .header-btn:hover {
@@ -109,7 +111,7 @@ header {
 
 .content-h-reimagined {
     font-size: 37px;
-    font-family: 'SF Pro Display';
+    font-family: 'SF Pro Display Semibold';
 }
 
 .divider {
@@ -135,7 +137,7 @@ header {
     margin: 0 40px;
     border-radius: 20px;
     -webkit-border-radius: 20px;
-    height: 250px;
+    height: auto;
 }
 .blue-gradient-text {
     background: linear-gradient(90deg, #007DFE, #90C6FF);
