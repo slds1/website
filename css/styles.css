@@ -242,6 +242,28 @@ header {
     background-color: #005bb5;
 }
 
+.download-btn-slim {
+    background-color: #007aff;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 8px 40px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'SF Pro Display Regular', inherit, serif;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    transition: background-color 0.2s;
+    text-decoration: none;
+}
+
+
+.download-btn-slim:hover {
+    background-color: #005bb5;
+}
+
 .object-block {
     position: relative;
 }
@@ -329,8 +351,26 @@ header {
     display: block;
 }
 
+.theme-image {
+    display: block;
+    width: 150px;
+    height: auto;
+}
+
+
 @media (max-width: 768px) {
     .download-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        padding: 12px 20px;
+        position: static;
+        top: auto;
+        right: auto;
+        box-sizing: border-box;
+    }
+    .download-btn-slim {
         display: block;
         width: 100%;
         text-align: center;
@@ -356,3 +396,92 @@ header {
         padding-right: 20px;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .theme-image {
+        content: url('planet-salupov-white.svg');
+    }
+    body {
+        background-color: #121212;
+        color: #ffffff;
+    }
+
+    header {
+        background-color: rgba(18, 18, 18, 0.8);
+        border-bottom: 1px solid #333;
+    }
+
+    .name, .content h1, .main-title, .section-title, .app-title, .team-name {
+        color: #ffffff;
+    }
+
+    .header-btn, .download-btn {
+        background-color: #1a73e8;
+        color: #ffffff;
+    }
+
+    .header-btn:hover, .download-btn:hover {
+        background-color: #135abe;
+    }
+
+    .content p, .description, .app-description, .team-role, .content-p {
+        color: #bbbbbb;
+    }
+
+    .divider {
+        background-color: #333333;
+    }
+
+    .object-block, .team-object-block {
+        background-color: #1e1e1e;
+        border: 1px solid #333;
+    }
+
+    .object-block h1, .team-object-block h1, .object-info {
+        color: #ffffff;
+    }
+
+    .object-block p, .team-object-block p {
+        color: #bbbbbb;
+    }
+
+    .popover {
+        background-color: #333333;
+        color: #ffffff;
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    }
+
+    .popover::before {
+        border-color: transparent transparent #333333 transparent;
+    }
+
+    .blue-gradient-text {
+        background: linear-gradient(90deg, #4a90e2, #90c6ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .purple-gradient-text {
+        background: linear-gradient(90deg, #6a4aff, #ac59ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    @keyframes fadeBlurScaleIn {
+        0% {
+            opacity: 0;
+            filter: blur(30px);
+            transform: scale(0.5);
+            visibility: hidden;
+        }
+        100% {
+            opacity: 1;
+            filter: blur(0);
+            transform: scale(1);
+            visibility: visible;
+        }
+    }
+
+}
+
+
