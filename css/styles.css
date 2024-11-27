@@ -169,6 +169,22 @@ header {
 }
 
 
+footer {
+    background-color: #f1f1f1;
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    position: static;
+    width: 100%;
+    bottom: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+    footer {
+        background-color: #1e1e1e;
+        color: #bbbbbb;
+    }
+}
 
 .obj-block-icon {
     display: block;
@@ -318,6 +334,7 @@ header {
 .obj-app-title {
     font-family: 'SF Pro Display Semibold', Arial, sans-serif;
     font-size: 40px;
+
 }
 
 .popover-container {
@@ -402,6 +419,10 @@ header {
     .content-p {
         padding-left: 20px;
         padding-right: 20px;
+    }
+
+    .obj-app-title {
+        font-size: 30px;
     }
 }
 
