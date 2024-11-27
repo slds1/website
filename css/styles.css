@@ -168,12 +168,20 @@ header {
     padding-left: 20px;
 }
 
+
+
 .obj-block-icon {
     display: block;
     width: 80px !important;
     height: 80px !important;
     object-fit: cover;
     overflow: hidden;
+}
+
+.obj-block-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 .object-block h1 {
     font-size: 35px;
